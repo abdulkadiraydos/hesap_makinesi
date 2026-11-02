@@ -1,0 +1,50 @@
+﻿<Application xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="hesap_makinesi.App">
+    <Application.Resources>
+        <ResourceDictionary>
+           
+            <Color x:Key="PrimaryColor">#2196F3</Color>
+            <Color x:Key="ButtonBackgroundColor">#F0F0F0</Color>
+            <Color x:Key="ButtonTextColor">#000000</Color>
+            <Color x:Key="OperationButtonColor">#FF9800</Color>
+
+           
+            <Style TargetType="Button">
+                <Setter Property="FontSize" Value="20"/>
+                <Setter Property="CornerRadius" Value="8"/>
+                <Setter Property="Margin" Value="2"/>
+            </Style>
+
+           
+            <Style x:Key="DigitButtonStyle" TargetType="Button">
+                <Setter Property="FontSize" Value="20"/>
+                <Setter Property="CornerRadius" Value="8"/>
+                <Setter Property="Margin" Value="2"/>
+                <Setter Property="BackgroundColor" Value="{StaticResource ButtonBackgroundColor}"/>
+                <Setter Property="TextColor" Value="{StaticResource ButtonTextColor}"/>
+            </Style>
+
+           
+            <Style x:Key="OperationButtonStyle" TargetType="Button">
+                <Setter Property="FontSize" Value="20"/>
+                <Setter Property="CornerRadius" Value="8"/>
+                <Setter Property="Margin" Value="2"/>
+                <Setter Property="BackgroundColor" Value="{StaticResource OperationButtonColor}"/>
+                <Setter Property="TextColor" Value="White"/>
+                <Setter Property="FontAttributes" Value="Bold"/>
+            </Style>
+
+           
+            <Style x:Key="EqualsButtonStyle" TargetType="Button">
+                <Setter Property="FontSize" Value="20"/>
+                <Setter Property="CornerRadius" Value="8"/>
+                <Setter Property="Margin" Value="2"/>
+                <Setter Property="BackgroundColor" Value="#4CAF50"/>
+                <Setter Property="TextColor" Value="White"/>
+                <Setter Property="FontAttributes" Value="Bold"/>
+            </Style>
+
+        </ResourceDictionary>
+    </Application.Resources>
+</Application>

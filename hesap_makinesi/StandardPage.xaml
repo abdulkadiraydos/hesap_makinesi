@@ -1,0 +1,56 @@
+<*36/
+    ?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="hesap_makinesi.StandardPage"
+             Title="Standart Hesap Makinesi">
+
+    <VerticalStackLayout Padding="20" Spacing="10">
+6
+        <Entry x:Name="CalcDisplay"
+               Text="0"
+               FontSize="40"
+               HorizontalTextAlignment="End"
+               IsReadOnly="True"
+               BackgroundColor="{AppThemeBinding Light={StaticResource ButtonBackgroundColor}, Dark=#333333}"
+               TextColor="{AppThemeBinding Light=Black, Dark=White}"
+               Margin="0,0,0,20"/>
+
+        <Grid RowDefinitions="*,*,*,*,*" 
+              ColumnDefinitions="*,*,*,*" 
+              RowSpacing="5" ColumnSpacing="5">
+
+          
+            <Button Text="C" Grid.Row="0" Grid.Column="0" Clicked="OnClearClicked" Style="{StaticResource OperationButtonStyle}"/>
+            <Button Text="CE" Grid.Row="0" Grid.Column="1" Clicked="OnClearEntryClicked" Style="{StaticResource OperationButtonStyle}"/>
+            <Button Text="⌫" Grid.Row="0" Grid.Column="2" Clicked="OnBackSpaceClicked" Style="{StaticResource OperationButtonStyle}"/>
+            <Button Text="÷" Grid.Row="0" Grid.Column="3" Clicked="OnOperatorClicked" Style="{StaticResource OperationButtonStyle}"/>
+
+            
+            <Button Text="7" Grid.Row="1" Grid.Column="0" Clicked="OnNumberClicked" Style="{StaticResource DigitButtonStyle}"/>
+            <Button Text="8" Grid.Row="1" Grid.Column="1" Clicked="OnNumberClicked" Style="{StaticResource DigitButtonStyle}"/>
+            <Button Text="9" Grid.Row="1" Grid.Column="2" Clicked="OnNumberClicked" Style="{StaticResource DigitButtonStyle}"/>
+            <Button Text="×" Grid.Row="1" Grid.Column="3" Clicked="OnOperatorClicked" Style="{StaticResource OperationButtonStyle}"/>
+
+          
+            <Button Text="4" Grid.Row="2" Grid.Column="0" Clicked="OnNumberClicked" Style="{StaticResource DigitButtonStyle}"/>
+            <Button Text="5" Grid.Row="2" Grid.Column="1" Clicked="OnNumberClicked" Style="{StaticResource DigitButtonStyle}"/>
+            <Button Text="6" Grid.Row="2" Grid.Column="2" Clicked="OnNumberClicked" Style="{StaticResource DigitButtonStyle}"/>
+            <Button Text="-" Grid.Row="2" Grid.Column="3" Clicked="OnOperatorClicked" Style="{StaticResource OperationButtonStyle}"/>
+
+           
+            <Button Text="1" Grid.Row="3" Grid.Column="0" Clicked="OnNumberClicked" Style="{StaticResource DigitButtonStyle}"/>
+            <Button Text="2" Grid.Row="3" Grid.Column="1" Clicked="OnNumberClicked" Style="{StaticResource DigitButtonStyle}"/>
+            <Button Text="3" Grid.Row="3" Grid.Column="2" Clicked="OnNumberClicked" Style="{StaticResource DigitButtonStyle}"/>
+            <Button Text="+" Grid.Row="3" Grid.Column="3" Clicked="OnOperatorClicked" Style="{StaticResource OperationButtonStyle}"/>
+
+            
+            <Button Text="+/-" Grid.Row="4" Grid.Column="0" Clicked="OnPlusMinusClicked" Style="{StaticResource DigitButtonStyle}"/>
+            <Button Text="0" Grid.Row="4" Grid.Column="1" Clicked="OnNumberClicked" Style="{StaticResource DigitButtonStyle}"/>
+            <Button Text="." Grid.Row="4" Grid.Column="2" Clicked="OnDecimalClicked" Style="{StaticResource DigitButtonStyle}"/>
+            <Button Text="=" Grid.Row="4" Grid.Column="3" Clicked="OnCalculateClicked" Style="{StaticResource EqualsButtonStyle}"/>
+
+        </Grid>
+    </VerticalStackLayout>
+</ContentPage>
+    

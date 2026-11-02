@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Shell xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+       xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+       xmlns:local="clr-namespace:hesap_makinesi"
+       x:Class="hesap_makinesi.AppShell"
+       Shell.FlyoutBehavior="Flyout">
+
+    <FlyoutItem Title="Calculator">
+        <ShellContent Title="Standard" 
+                      ContentTemplate="{DataTemplate local:StandardPage}" 
+                      Route="StandardPage" />
+        <ShellContent Title="Scientific" 
+                      ContentTemplate="{DataTemplate local:ScientificPage}" 
+                      Route="ScientificPage" />
+        <ShellContent Title="Graphing" 
+                      ContentTemplate="{DataTemplate local:GraphingPage}" 
+                      Route="GraphingPage" />
+        <ShellContent Title="Programmer" 
+                      ContentTemplate="{DataTemplate local:ProgrammerPage}" 
+                      Route="ProgrammerPage" />
+        <ShellContent Title="Date calculation" 
+                      ContentTemplate="{DataTemplate local:DateCalcPage}" 
+                      Route="DateCalcPage" />
+    </FlyoutItem>
+
+    
+    <FlyoutItem Title="Converter">
+        <VisualStateManager.VisualStateGroups>
+            <VisualStateGroup x:Name="CommonStates">
+                <VisualState x:Name="Normal"/>
+            </VisualStateGroup>
+        </VisualStateManager.VisualStateGroups>
+        <ShellContent Title="Currency" 
+                      ContentTemplate="{DataTemplate local:CurrencyPage}" 
+                      Route="CurrencyPage" />
+        <ShellContent Title="Volume" 
+                      ContentTemplate="{DataTemplate local:VolumePage}" 
+                      Route="VolumePage" />
+    </FlyoutItem>
+
+    <ShellContent Title="Settings" 
+                  ContentTemplate="{DataTemplate local:SettingsPage}" 
+                  Route="SettingsPage" />
+
+</Shell>
